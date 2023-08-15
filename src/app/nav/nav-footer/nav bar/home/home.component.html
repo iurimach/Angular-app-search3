@@ -1,0 +1,114 @@
+
+
+<div>
+   
+    <input type="text" class="input1" [(ngModel)]="searchTerm" (keyup)="search()" placeholder="Search by Name" />
+  </div>
+
+
+
+
+<div class="section1">
+
+  <div class="searcwrapper">
+    <div>
+     
+      <select name="model" id="model">
+        <option value="selectmodel">select model</option>
+        <option value="leptop">dell</option>
+        <option value="leptop">lenovo</option>
+        <option value="leptop">asus</option>
+        <option value="leptop">Hp</option>
+        <option value="leptop">Acer</option>
+        <option value="iphone">iphone</option>
+        <option value="samsung">samsung</option>
+      </select>
+    </div>
+      <div class="inputdiv">
+        <input type="text" placeholder="min-price" class="vonbis"  [(ngModel)]="minPrice" (keyup)="filterItems()">
+        <input type="text" placeholder="max-price"  class="vonbis" [(ngModel)]="maxPrice" (keyup)="filterItems()">
+      </div>
+      <div class="inputdiv">
+        <input type="text" placeholder="min" class="vonbis">
+        <input type="text" placeholder="max"  class="vonbis">
+      </div>
+      <div class="inputdiv">
+        <input type="text" placeholder="year" class="vonbis">
+        <input type="text" placeholder="year"  class="vonbis">
+      </div>
+    
+  </div>
+
+ 
+  <div class="datawrapper"  [class.none]="minPrice >0">
+    <div id="wrapper" *ngIf="!filteredItems" >
+
+        <div class="myCard" *ngFor="let item of items" id="item" >
+          <div class="innerCard" id="divkont" [class.none]="minPrice >0">
+            
+                <div class="frontSide"[class.none]="minPrice >0">
+                  <img [src]="item.src" alt="err" class="foto1"[class.none]="minPrice >0" />
+                    <p [class.none]="minPrice >0" >Hover Me</p>
+                </div>
+                <div class="backSide"[class.none]="minPrice >0">
+                        <li id="itemname">Name - {{ item.title }}</li>
+                        <li>{{ item.price }} $</li>
+                        <li>{{ item.ebaut }}</li>
+                      
+                        
+                </div>
+              </div>
+          
+      </div>
+    </div>
+    
+    <div id="wrapper"  *ngIf="filteredItems"  [class.none]="minPrice >0" >
+
+      <div class="myCard" *ngFor="let item of filteredItems" id="item"  >
+        <div class="innerCard" id="divkont">
+          
+              <div class="frontSide" [class.none]="minPrice >0">
+                <img [src]="item.src" alt="err" class="foto1"  [class.none]="minPrice >0"/>
+                  <p [class.none]="minPrice >0">Hover Me</p>
+              </div>
+              <div class="backSide"[class.none]="minPrice >0">
+                      <li id="itemname"> Name - {{ item.title }}</li>
+                      <li>{{ item.price }} $</li>
+                      <li>{{ item.ebaut }}</li>
+                      
+              </div>
+            
+        </div>
+        
+        </div> 
+  </div>
+</div>
+  <!-- zeda dviebs  gavuwere clas none yvelas shesabmisd qrebian magram mtavri divi ro qreba probblma mere -->
+  
+
+          <!-- zebna by pricce   -->
+
+
+  
+ 
+    <div *ngIf="minPrice > 0 " id="wrapper">
+
+       <div class="wranning"  [class.none]="maxPrice >0">Enter the max-price</div>
+       
+
+      <div class="myCard" *ngFor="let item of filteredItemsbyprice" id="item" >
+        <div class="innerCard" id="divkont">
+          
+              <div class="frontSide">
+                <img [src]="item.src" alt="err" class="foto1" />
+                  <p>Hover Me</p>
+              </div>
+              <div class="backSide">
+                      <li id="itemname"> Name - {{ item.title }}</li>
+                      <li>{{ item.price }} $</li>
+                      <li>{{ item.ebaut }}</li>
+                      
+              </div>
+        </div>
+    </div>
+

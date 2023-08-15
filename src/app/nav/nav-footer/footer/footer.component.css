@@ -1,0 +1,229 @@
+
+
+
+.fboxwraper{
+    
+    width: 100%;
+    height: 250px;
+    margin-top: 50px;
+    
+    background-color: #000000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+ 
+}
+    .fconteiner{
+        max-width: 1200px;
+        width: 90%;
+        height: auto;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+
+
+
+        
+    }
+
+    .footerbox2 ,  .footerbox3{
+        color: white;
+        width: 220px;
+        list-style: none;
+        height: auto;
+
+
+    }
+    .footerbox2 ,  .footerbox3, .footerbox4{
+        padding-left: 30px;
+
+    }
+
+    .footerbox2 h3 , .footerbox4 h3 {
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+    }
+        .footerbox2 li{
+            padding-top: 15px;
+            
+        }
+            .footerbox2 li a{
+                color: #ffffff;
+            }
+    .footerbox3{
+        font-size: 22px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .ficon{
+        margin-top: 30px;
+        color: #ffffff;
+    }
+        .ficon a{
+            
+            color: #ffffff;
+        }
+    #icon2{
+        padding-left: 10px;
+        
+    }
+        .ficon i{
+            font-size: 18px;
+            
+        }
+    .footerbox4{
+        color: #ffffff;
+        max-width: 300px;
+        flex-direction: column;   
+    }
+
+        .footerbox4 input{
+            flex-direction: column;
+            margin-top: 30px;
+            height: 30px;
+            outline: none;
+            width: 90%;
+        }
+
+.footerbox4 button{
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid silver;
+    max-width: 80px;
+    height: 35px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; 
+}     
+
+.footerbox4 button a{
+    text-decoration: none;
+    color: #ffffff;
+        
+}
+
+
+
+
+.footerend{
+width: 100%;
+height: 100px;
+background-color: #000000;
+position: relative;   
+}
+
+.footerend::before{
+content: "";
+width: 100%;
+height: 1.5px;
+background-color: rgba(25, 32, 32, 0.753);
+display: inline-block;
+}
+.footerend i, .footerend p{
+color: #ffffff;
+margin-left: 10px;
+
+}
+
+.copyright{
+display: flex;
+position: absolute;
+top: 50%;
+margin-left: 42%;
+box-sizing: border-box;
+}
+
+
+/* stars */
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.3rem;
+    --stroke: #666;
+    --fill: #ffc73a;
+  }
+  
+  .rating input {
+    appearance: unset;
+  }
+  
+  .rating label {
+    cursor: pointer;
+  }
+  
+  .rating svg {
+    width: 3rem;
+    height: 3rem;
+    overflow: visible;
+    fill: transparent;
+    stroke: var(--stroke);
+    stroke-linejoin: bevel;
+    stroke-dasharray: 12;
+    animation: idle 4s linear infinite;
+    transition: stroke 0.2s, fill 0.5s;
+  }
+  
+  @keyframes idle {
+    from {
+      stroke-dashoffset: 24;
+    }
+  }
+  
+  .rating label:hover svg {
+    stroke: var(--fill);
+  }
+  
+  .rating input:checked ~ label svg {
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+  
+  @keyframes yippee {
+    0% {
+      transform: scale(1);
+      fill: var(--fill);
+      fill-opacity: 0;
+      stroke-opacity: 1;
+      stroke: var(--stroke);
+      stroke-dasharray: 10;
+      stroke-width: 1px;
+      stroke-linejoin: bevel;
+    }
+  
+    30% {
+      transform: scale(0);
+      fill: var(--fill);
+      fill-opacity: 0;
+      stroke-opacity: 1;
+      stroke: var(--stroke);
+      stroke-dasharray: 10;
+      stroke-width: 1px;
+      stroke-linejoin: bevel;
+    }
+  
+    30.1% {
+      stroke: var(--fill);
+      stroke-dasharray: 0;
+      stroke-linejoin: miter;
+      stroke-width: 8px;
+    }
+  
+    60% {
+      transform: scale(1.2);
+      fill: var(--fill);
+    }
+  }
+  

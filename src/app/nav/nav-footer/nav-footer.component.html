@@ -1,0 +1,79 @@
+
+			<div class=" header">
+				
+					<button (click)="adddarckmode()"  class="btdarc-whitekmode">  
+						<div *ngIf="darckmode %2 === 0"> 
+							
+							<img src="https://www.drupal.org/files/project-images/dark%20mode%20drupal.png" alt="err" class="modelimg">
+					
+						</div>
+
+						<div *ngIf="darckmode %2 ===1"> 
+							<img src="https://static.vecteezy.com/ti/gratis-vector/p3/8547005-lamp-pictogram-geisoleerd-gratis-vector.jpg" alt="err" class="modelimg">
+				
+						</div>
+						
+
+					
+					</button>
+						
+					
+
+					
+					
+					<!-- // mozravi yuti       -->
+
+					<div class="boxes">
+						<div class="box">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="box">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="box">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="box">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+			</div>
+
+
+
+<!-- funqcia toggle moderation -->
+
+
+
+
+
+
+			<ul class="container-fluid">
+				<ul >
+					<img src="../../../assets/foto/logo.png" alt="err" class="logo" [routerLink]="['/home']"  routerLinkActive="active">
+					
+					<button class="navbutton"><li [routerLink]="['/home']"  routerLinkActive="active" class="ul2">Home </li></button>
+				</ul>
+				<button class="navbutton"><li [routerLink]="['/Galeri']"  routerLinkActive="active">Galeri </li></button>
+			<button class="navbutton"> <li [routerLink]="['/contact']"  routerLinkActive="active">Contact</li>  </button>
+			</ul>
+			
+<div [class.darckmode]="darckmode %2 === 0">
+			
+	<router-outlet></router-outlet>
+</div>			
+<app-footer></app-footer>
+
+

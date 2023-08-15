@@ -1,0 +1,187 @@
+.radarwrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.map{
+    width: 250px;
+    height: 250px;
+    margin-top: 10px;
+}
+.form {
+    display: flex;
+    max-width: 250px;
+    height: 400px;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0.4em;
+    background-color: #171717;
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  .form:hover {
+    transform: scale(1.05);
+    border: 1px solid black;
+  }
+  
+  #heading {
+    text-align: center;
+    margin: 2em;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+  }
+  
+  .field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  }
+  
+  .input-icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: white;
+  }
+  
+  .input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+  }
+  
+  .form .btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2.5em;
+  }
+  
+  .button1 {
+    padding: 0.5em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+  }
+  
+  .button1:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .button2 {
+    padding: 0.5em;
+    padding-left: 2.3em;
+    padding-right: 2.3em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+  }
+  
+  .button2:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .button3 {
+    margin-bottom: 3em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+  }
+  
+  .button3:hover {
+    background-color: red;
+    color: white;
+  }
+
+
+  /* radariiiiiiiiiiiiiiiiiiiiiiii */
+
+  .one-div {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: repeating-radial-gradient(circle at 50%, rgba(10, 222, 61,.4), rgba(10, 222, 61,.4) 2px, #000  2px, #000 12px);
+    border-radius: 50%;
+    border: 1px dotted rgba(10, 222, 61,.4);
+    overflow: hidden;
+  }
+  
+  .one-div::before {
+    position: absolute;
+    content: "";
+    top: calc(100% - 25%);
+    left: 50%;
+    transform-origin: 5px 0;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 50%;
+    border-radius: 10px;
+    filter: blur(3px);
+    background-image: linear-gradient(to left, rgba(10, 222, 61, .3) 50% , rgb(10, 222, 61) 50%);
+    opacity: .7;
+    animation: radar-animation 2.5s infinite linear;
+  }
+  
+  .one-div::after {
+    content: "";
+    position: absolute;
+    bottom: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: rgba(10, 222, 61,1);
+    animation: dot-animation 2.5s infinite ease-in-out;
+  }
+  
+  @keyframes radar-animation {
+    0% {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+  
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes dot-animation {
+    50% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(2);
+    }
+  
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
