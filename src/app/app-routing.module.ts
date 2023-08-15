@@ -9,8 +9,8 @@ import { ContactComponent } from './nav/nav-footer/nav bar/contact/contact.compo
 const routes: Routes = [
 
   {
-    path: 'logo',
-    component: LogoComponent
+    path: '',
+    component: HomeComponent
   },
   {
     path: 'home',

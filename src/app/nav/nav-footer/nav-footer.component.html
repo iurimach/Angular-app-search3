@@ -62,7 +62,7 @@
 
 			<ul class="container-fluid">
 				<ul >
-					<img src="../../../assets/foto/logo.png" alt="err" class="logo" [routerLink]="['/home']"  routerLinkActive="active">
+					<img src="assets/foto/logo.png" alt="err" class="logo" [routerLink]="['/home']"  routerLinkActive="active">
 					
 					<button class="navbutton"><li [routerLink]="['/home']"  routerLinkActive="active" class="ul2">Home </li></button>
 				</ul>
@@ -72,8 +72,13 @@
 			
 <div [class.darckmode]="darckmode %2 === 0">
 			
-	<router-outlet></router-outlet>
-</div>			
-<app-footer></app-footer>
+	 <router-outlet> </router-outlet>
+	
+
+
+</div>	
+
+
+
 
 
