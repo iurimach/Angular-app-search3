@@ -185,11 +185,21 @@
 
   .divtoglleinformation{
     position: absolute;
-    width: 400px;
-    height: 300px;
+    
+    width: 140%;
+    height: 320px;
     background-color: #0093E9;
     display: block;
-    z-index: 75;
+    
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    background-color: #0093E9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    transform: translate(-50%, -50%);
+    Z-index: 99 !important;
     
     
   }
@@ -235,4 +245,133 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   .toglebattonshida:hover{
     background-color: #55ec8c;
 transform: scale(1.05);
+  }
+
+
+/* mobile freundlich         --respnse */
+@media only screen and (min-width: 1200px) {
+  .divtoglleinformation{
+      
+    width: 380px;
+    height: 340px;
+  
+    top: 33%;
+    left: 25%; 
+    
+  }
+
+}
+  @media only screen and (max-width: 1100px) {
+  .divtoglleinformation{
+      
+    width: 150%;
+    height: 340px;
+  
+    top: 30%;
+    left: 25%; 
+    
+  }
+}
+
+
+  @media only screen and (max-width: 700px) {
+    #wrapper{
+      background-color:#ccc;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+    }
+    #divkont{
+      max-width: 200px;
+    }
+    #item{
+      max-width: 200px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .searcwrapper{
+      max-width: 120px;
+      flex-direction: column;
+      
+    }
+    #model{
+      width: 90px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    .inputdiv{
+      width: 90px;
+      flex-direction: column;
+  
+    }
+  
+    #itemname{
+      font-size: 12px;
+      border: none;
+    }
+    .divtoglleinformation{
+      height: auto;
+    }
+    .divtoglleinformation{
+      
+      width: 125%;
+      height: 330px;
+    
+      top: 40%;
+      left: 45%; 
+      
+    }
+  
+  
+    
+  }
+  
+  
+  @media only screen and (max-width: 400px) {
+    #wrapper{
+      background-color: #ccc;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #divkont{
+      max-width: 130px;
+    }
+    #item{
+      max-width: 130px;
+      width: 100%;
+    }
+  
+    .searcwrapper{
+      max-width: 100px;
+      flex-direction: column;
+      
+    }
+    #model{
+      width: 80px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    .inputdiv{
+      width: 80px;
+      flex-direction: column;
+  
+    }
+    .divtoglleinformation{
+      
+      width: 160%;
+      height: 340px;
+    
+      top: 40%;
+      left: 45%; 
+      
+    }
+    
+    #infoback{
+      display: none;
+    }
+  
+    
   }

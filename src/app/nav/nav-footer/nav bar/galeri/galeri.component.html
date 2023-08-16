@@ -19,22 +19,22 @@
             <div class="backSide">
                     <li>{{ item.name }}</li>
                     <li>{{ item.price }}</li>
-                    <li style="margin-bottom: 20px;">{{ item.ebaut }}</li>
+                    <li style="margin-bottom: 20px;" id="infoback">{{ item.ebaut }}</li>
                   
                     <!-- togle button -->
                     <button (click)="onToggle()" class="toglebt1"> More detal</button>
+                    
                     <div *ngIf="isToggled" class="divtoglleinformation">
 
-                      <button (click)="onToggle()" class="toglebattonshida"> close infromfaton</button>
-
-                      <p>{{ item.name }}</p>
-                      <p>{{ item.price }}</p>
-                      <p> detal : xxxx</p>
-                      <p>yar : xxxx</p>
-                      <p>pay : xxxx</p>
-                      <p>product : xxxx</p>
-                      <p>size : xxxx</p>
-                      <p>delivery : xxxx</p>
+                        <button (click)="onToggle()" class="toglebattonshida"> close infromfaton</button>
+                        <p>{{ item.name }}</p>
+                        <p>{{ item.price }}</p>
+                        <p> detal : xxxx</p>
+                        <p>yar : xxxx</p>
+                        <p>pay : xxxx</p>
+                        <p>product : xxxx</p>
+                        <p>size : xxxx</p>
+                        <p>delivery : xxxx</p>
                      
                     </div>
                     
