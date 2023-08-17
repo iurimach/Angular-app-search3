@@ -278,6 +278,13 @@ border-radius: 10px;
 
 
 @media only screen and (max-width: 400px) {
+  .container-fluid{
+    width: 70%;
+   
+  }
+  .input1{
+    margin-left: 15%;
+  }
   #wrapper{
     background-color: #ccc;
     flex-direction: column;

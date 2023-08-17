@@ -112,7 +112,8 @@ export class HomeComponent  {
     this.filteredItemsbyprice = this.items.filter(item => item.price >= this.minPrice && item.price <= this.maxPrice);
   }
   
-  
+  //filter item by select 
+ 
  
 }
 

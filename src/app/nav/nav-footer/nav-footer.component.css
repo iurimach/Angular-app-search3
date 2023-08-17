@@ -511,6 +511,7 @@ li{
   }
   
   .header{
+    width: 90%;
     display: flex;
     justify-content: space-around;
   }
@@ -548,7 +549,8 @@ li{
   @media only screen and (max-width: 600px) {
     
     .container-fluid{
-      width: 90%;
+      width: 80%;
+      margin: 0 auto;
     }
     .navbutton{
       padding: 0px;
