@@ -10,7 +10,7 @@ import { HomeComponent } from './nav/nav-footer/nav bar/home/home.component';
 import { GaleriComponent } from './nav/nav-footer/nav bar/galeri/galeri.component';
 import { ContactComponent } from './nav/nav-footer/nav bar/contact/contact.component';
 import { FormsModule } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     
     AppRoutingModule, 
     FormsModule

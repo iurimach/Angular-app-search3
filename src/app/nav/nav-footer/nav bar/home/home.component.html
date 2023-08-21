@@ -13,16 +13,16 @@
   <div class="searcwrapper">
     <div>
      
-      <select name="model" id="model">
-        <option value="selectmodel" >select model</option>
-        <option value="leptop">dell</option>
-        <option value="leptop">lenovo</option>
-        <option value="leptop">asus</option>
-        <option value="leptop">Hp</option>
-        <option value="leptop">Acer</option>
-        <option value="iphone 14">iphone</option>
+      <select name="model" id="model" [(ngModel)]="selectedOption">
+        <option value="selectmodel"  >empty</option>
+        <option value="Dell" >dell</option>
+        <option value="Lenovo">lenovo</option>
+        <option value="asus">asus</option>
+        <option value="Iphone 14">iphone 14</option>
         <option value="Samsung">samsung</option>
       </select>
+
+     
       
     </div>
       <div class="inputdiv">
@@ -30,18 +30,19 @@
         <input type="text" placeholder="max-price"  class="vonbis" [(ngModel)]="maxPrice" (keyup)="filterItems()">
       </div>
       <div class="inputdiv">
-        <input type="text" placeholder="min" class="vonbis">
-        <input type="text" placeholder="max"  class="vonbis">
+        <input type="text" placeholder="unknown" class="vonbis">
+        <input type="text" placeholder="unknown"  class="vonbis">
       </div>
       <div class="inputdiv">
-        <input type="text" placeholder="year" class="vonbis">
-        <input type="text" placeholder="year"  class="vonbis">
+        <input type="text" placeholder="unknown" class="vonbis">
+        <input type="text" placeholder="unknown"  class="vonbis">
       </div>
     
   </div>
 
- 
-  <div class="datawrapper"  [class.none]="minPrice >0">
+ <!-- centraluri yuti  defaultad rac chans -->
+
+  <div class="datawrapper"  [class.none]="minPrice >0 ||selectedOption && selectedOption!='selectmodel'">
     <div id="wrapper" *ngIf="!filteredItems" >
 
         <div class="myCard" *ngFor="let item of items" id="item" >
@@ -60,8 +61,9 @@
                 </div>
               </div>
           
-      </div>
+        </div>
     </div>
+
     
     <div id="wrapper"  *ngIf="filteredItems"  [class.none]="minPrice >0" >
 
@@ -85,7 +87,38 @@
   </div>
 </div>
   <!-- zeda dviebs  gavuwere clas none yvelas shesabmisd qrebian  -->
-  
+
+   <!-- sweatceisi   gagrZelba opttion zemot weria saidanc momaq value -->
+      <div [ngSwitch]="selectedOption" >
+        <div *ngSwitchCase="'Dell'"  [class.none]="minPrice >0" > </div>
+        <div *ngSwitchCase="'Lenovo'" [class.none]="minPrice >0"> </div>
+        <div *ngSwitchCase="'Iphone 14'" [class.none]="minPrice >0"></div>
+        <div *ngSwitchCase="'Samsung'" [class.none]="minPrice >0"> </div>
+        <div *ngSwitchCase="'asus'" [class.none]="minPrice >0 " ><p style="margin-left: 150px; font-size: 30px;">well be add soon !</p> </div>
+       
+          
+
+          <div  *ngFor="let swcase of items" >
+            <div   *ngIf="swcase.title==selectedOption "  class="myCard" [class.none]="minPrice >0"> 
+              <!-- თუ იტემბის სახელი უდრის ცვლადს , სადაც სახლეი გადეცემა სელქტ არჩევაზე მაშინ გამოაჩენს ამ დივს -->
+                <div class="innerCard" id="divkont" [class.none]="minPrice >0">
+                    <!-- //minPrice >0 tu price ველი შეიყვნა მომხრებლმა ამ ფილტრს გააქრობს -->
+                  <div class="frontSide">
+                    <img [src]="swcase.src" alt="err" class="foto1"/>
+                    <p [class.none]="minPrice >0" >Hover Me</p>
+                  </div>
+                  <div class="backSide">
+                      <li id="itemname">Name - {{ swcase.title }}</li>
+                      <li>{{ swcase.price }} $</li>
+                      <li>{{ swcase.ebaut }}</li>
+                  </div>
+
+                </div>
+             </div>
+            
+          </div>
+      
+      </div>
 
           <!-- zebna by pricce   -->
 

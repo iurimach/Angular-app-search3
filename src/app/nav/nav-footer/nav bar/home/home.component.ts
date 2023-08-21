@@ -22,6 +22,7 @@ export class HomeComponent  {
   ngOnInit() {
     this.search();
     
+    
   }
 
   items: Item[] = [
@@ -113,8 +114,8 @@ export class HomeComponent  {
   }
   
   //filter item by select 
+  selectedOption: any = '';
  
+  
  
-}
-
-
+  }

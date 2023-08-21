@@ -551,12 +551,17 @@ li{
     .container-fluid{
       width: 80%;
       margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      
     }
     .navbutton{
       padding: 0px;
+      position:static
+      
     }
     .navbutton>li{
-      font-size: 14px;
+      font-size: 10px;
     }
     .cont-fluid-ul1{
       margin-left: -80px;
