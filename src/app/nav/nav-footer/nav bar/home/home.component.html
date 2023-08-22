@@ -4,9 +4,24 @@
    
     <input type="text" class="input1" [(ngModel)]="searchTerm" (keyup)="search()" placeholder="Search by Name" />
   </div>
-
-
-
+<!-- max widt 400 px section -->
+  <div class="sectionsearch400">
+    <div class="selectdiv">  
+      <select name="model" id="model" [(ngModel)]="selectedOption">
+        <option value="selectmodel"  >empty</option>
+        <option value="Dell" >dell</option>
+        <option value="Lenovo">lenovo</option>
+        <option value="asus">asus</option>
+        <option value="Iphone 14">iphone 14</option>
+        <option value="Samsung">samsung</option>
+      </select> 
+    </div>
+    
+      <div><input type="text" placeholder="min-price" class="vonbis"  [(ngModel)]="minPrice" (keyup)="filterItems()"></div>
+      <div><input type="text" placeholder="max-price"  class="vonbis" [(ngModel)]="maxPrice" (keyup)="filterItems()"></div>
+    
+  </div>
+<!-- seqctiebi iwyeba aqedan  -->
 
 <div class="section1">
 
